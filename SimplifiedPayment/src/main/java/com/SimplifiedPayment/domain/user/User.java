@@ -4,8 +4,8 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.usertype.UserType;
 
 import java.math.BigDecimal;
 
@@ -14,6 +14,7 @@ import java.math.BigDecimal;
 @Getter
 @Setter
 @AllArgsConstructor
+@NoArgsConstructor // Adicionando construtor padrão
 @EqualsAndHashCode(of = "id")
 public class User {
     @Id
@@ -25,11 +26,9 @@ public class User {
     private String lastName;
 
     @Column(unique = true)
-
     private String document;
 
     @Column(unique = true)
-
     private String email;
 
     private String password;

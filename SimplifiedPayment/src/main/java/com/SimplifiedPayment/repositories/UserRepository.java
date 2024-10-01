@@ -1,4 +1,4 @@
-package com.SimplifiedPayment;
+package com.SimplifiedPayment.repositories;
 
 import com.SimplifiedPayment.domain.user.User;
 import org.springframework.data.jpa.repository.JpaRepository;
